@@ -19,7 +19,7 @@ export class DatadogLambdaStack extends Stack {
             code: Code.fromAsset(path.join(__dirname, '../lambda/customer')),
             environment: {
                 DD_ENV: 'prod',
-                DD_SERVICE: 'Customer-Service',
+                DD_SERVICE: 'Customer',
                 DD_VERSION: '1',
                 DD_TAGS:'name:customer-api'
             }
@@ -34,7 +34,7 @@ export class DatadogLambdaStack extends Stack {
             code: Code.fromAsset(path.join(__dirname, '../lambda/order')),
             environment: {
                 DD_ENV: 'prod',
-                DD_SERVICE: 'Order-Service',
+                DD_SERVICE: 'Order',
                 DD_VERSION: '1',
                 DD_TAGS:'name:order-api'
             }
